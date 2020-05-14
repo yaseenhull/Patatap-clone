@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+
+    <link rel="stylesheet" type="text/css" href="">
+    <!-- HTML canvas can be used to draw graphics via scripting in javascript -->
+    <script type="text/javascript" src="assets/js/paper-full.js"></script>
+
+    <script type="text/paperscript" canvas="myCanvas">
+        var x = 50;
+        var y = 50;
+        var cList = [];
+
+        for(var i = 0; i < 10 ; i++){
+            cList[i] = new Path.Circle(new Point(x, y), 50);
+            cList.fillColor = 'blue';
+
+            x = x + 50;
+        }
+     
+
+    </script>
+    
+</head>
+<body>
+    <canvas id="myCanvas" resize></canvas>
+</body>
+</html>
